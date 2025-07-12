@@ -1,7 +1,5 @@
 @import "tailwindcss";
-*{
-  color: #fff;
-}
+
 body{
   background-color: #111;
 }
@@ -12,4 +10,12 @@ body{
 #tasklist::-webkit-scrollbar-thumb{
   background-color: rgb(143, 143, 143);
   border-radius: 50px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

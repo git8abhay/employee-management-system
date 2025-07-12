@@ -40,12 +40,12 @@ const Login = ({ handleLogin }) => {
 
           <button
             type="submit"
-            className="bg-cyan-600 hover:bg-cyan-500 font-semibold py-2 rounded-full transition-all duration-300 hover:shadow-cyan-300/40 hover:scale-105"
+            className="text-white bg-cyan-600 hover:bg-cyan-500 font-semibold py-2 rounded-full transition-all duration-300 hover:shadow-cyan-300/40 hover:scale-105"
           >
             Log in
           </button>
 
-          <p className="text-center text-sm text-red">
+          <p className="text-center text-sm text-white">
             Don't have Login credentials? <span className="!text-cyan-200 hover:underline cursor-pointer">click here</span>
           </p>
         </form>

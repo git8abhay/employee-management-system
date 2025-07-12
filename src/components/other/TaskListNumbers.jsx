@@ -1,27 +1,63 @@
-import React from 'react'
+import React from 'react';
+import {
+  ClipboardList,
+  CheckCircle,
+  Clock,
+  XCircle,
+} from 'lucide-react';
 
-const TaskListNumbers = ({data}) => {
+const TaskListNumbers = ({ data }) => {
+  const { newTask, completed, active, failed } = data.taskCounts;
+
+  const items = [
+    {
+      label: 'New',
+      count: newTask,
+      icon: ClipboardList,
+      border: 'border-blue-400',
+      glow: 'group-hover:shadow-blue-400/60',
+      pulse: true,
+    },
+    {
+      label: 'Completed',
+      count: completed,
+      icon: CheckCircle,
+      border: 'border-green-400',
+      glow: 'group-hover:shadow-green-400/60',
+    },
+    {
+      label: 'Active',
+      count: active,
+      icon: Clock,
+      border: 'border-yellow-400',
+      glow: 'group-hover:shadow-yellow-400/60',
+    },
+    {
+      label: 'Failed',
+      count: failed,
+      icon: XCircle,
+      border: 'border-red-400',
+      glow: 'group-hover:shadow-red-400/60',
+    },
+  ];
+
   return (
-    <div className='flex mt-10 justify-between gap-5 screen'>
-        
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-blue-400'>
-            <h2 className='text-3xl font-bold'>{data.taskCounts.newTask}</h2>
-            <h3 className='text-xl mt-0.5 font-medium'>New Task</h3>
+    <div className="flex flex-wrap justify-center gap-8 mt-10">
+      {items.map(({ label, count, icon: Icon, border, glow, pulse }, idx) => (
+        <div key={idx} className="flex flex-col items-center group">
+          <div
+            className={`w-24 h-24 rounded-full flex flex-col items-center justify-center bg-white/5 backdrop-blur-md text-white border-2 ${border} ${glow} transition-all duration-300 ${
+              pulse ? 'animate-pulse border-[3px]' : ''
+            }`}
+          >
+            <Icon size={22} className="mb-1" />
+            <span className="text-sm">{label}</span>
+          </div>
+          <span className="mt-2 text-lg font-bold text-cyan-100">{count}</span>
         </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-green-400'>
-            <h2 className='text-3xl font-bold'>{data.taskCounts.completed}</h2>
-            <h3 className='text-xl mt-0.5 font-medium'>Completed Task</h3>
-        </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-yellow-400 '>
-            <h2 className='text-3xl text-black font-bold'>{data.taskCounts.active}</h2>
-            <h3 className='text-xl mt-0.5 text-black font-medium'>Accepted Task</h3>
-        </div>
-        <div className='rounded-xl w-[45%] py-6 px-9 bg-red-400'>
-            <h2 className='text-3xl font-bold'>{data.taskCounts.failed}</h2>
-            <h3 className='text-xl mt-0.5 font-medium'>Failed Task</h3>
-        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default TaskListNumbers
+export default TaskListNumbers;

@@ -1,29 +1,42 @@
-import React from 'react'
-import AcceptTask from './AcceptTask'
-import NewTask from './NewTask'
-import CompleteTask from './CompleteTask'
-import FailedTask from './FailedTask'
+import React from 'react';
+import AcceptTask from './AcceptTask';
+import NewTask from './NewTask';
+import CompleteTask from './CompleteTask';
+import FailedTask from './FailedTask';
 
 const TaskList = ({ data }) => {
-    return (
-        <div id='tasklist' className='h-[50%] overflow-x-auto flex items-center justify-start gap-5 flex-nowrap w-full py-1 mt-16'>
-            {data.tasks.map((elem, idx) => {
-                if (elem.active) {
-                    return <AcceptTask key={idx} data={elem} />
-                }
-                if (elem.newTask) {
-                    return <NewTask key={idx} data={elem} />
-                }
-                if (elem.completed) {
-                    return <CompleteTask key={idx} data={elem} />
-                }
-                if (elem.failed) {
-                    return <FailedTask key={idx} data={elem} />
-                }
+  return (
+    <div
+      id="tasklist"
+      className="mt-14 flex gap-6 overflow-x-auto scrollbar-hide px-2 py-1"
+      style={{
+        scrollSnapType: 'x mandatory',
+        WebkitOverflowScrolling: 'touch',
+      }}
+    >
+      {data.tasks.map((elem, idx) => {
+        const Card = elem.active
+          ? AcceptTask
+          : elem.newTask
+          ? NewTask
+          : elem.completed
+          ? CompleteTask
+          : elem.failed
+          ? FailedTask
+          : null;
 
-            })}
-        </div>
-    )
-}
+        return Card ? (
+          <div
+            key={idx}
+            className="flex-shrink-0 scroll-snap-align-start"
+            style={{ minWidth: '300px' }}
+          >
+            <Card data={elem} />
+          </div>
+        ) : null;
+      })}
+    </div>
+  );
+};
 
-export default TaskList
+export default TaskList;
