@@ -15,7 +15,7 @@ const Login = ({ handleLogin }) => {
     <div className="h-screen w-screen flex items-center justify-center bg-black bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="w-[90%] max-w-md backdrop-blur-md bg-white/10 border border-cyan-400/40 p-10 rounded-2xl shadow-2xl hover:shadow-cyan-500/40 transition-all duration-500">
         <h2 className="text-white text-3xl font-bold text-center mb-8">
-            <LogIn size={28} className="text-cyan-400" />Login</h2>
+           Login</h2>
 
         <form onSubmit={submitHandler} className="flex flex-col gap-5">
           <input
