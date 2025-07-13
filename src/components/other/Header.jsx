@@ -10,7 +10,7 @@ const Header = (props) => {
 
   
   return (
-    <div className="flex justify-between items-center bg-white/10 border border-cyan-400/30 rounded-xl p-4 mb-6 shadow-md">
+    <div className="flex justify-between items-center bg-white/10 border border-cyan-400/30 rounded-xl p-4 mb-6 shadow-md sm:flex-row sm:gap-0 sm:w-auto">
   <h1 className="text-white text-xl sm:text-2xl">
     Hello <br />
     <span className="text-3xl font-semibold !text-yellow-500">User ABC👋</span>
