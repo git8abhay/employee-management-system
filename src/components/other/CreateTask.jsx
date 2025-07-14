@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/AuthProvider';
 import { CalendarDays, ClipboardEdit, User, Tags, FileText } from 'lucide-react';
 
 const CreateTask = () => {
-  const [userData, setUserData] = useContext(AuthContext);
+  const {userData, setUserData} = useContext(AuthContext);
 
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
@@ -46,6 +46,8 @@ const CreateTask = () => {
   };
 
   return (
+    <div>
+      <h2 className="text-3xl font-bold text-white mb-6 text-center">Task Creation</h2>
     <div className="p-6 rounded-xl bg-white/10 border border-cyan-400/30 shadow-md mt-6 backdrop-blur-md">
       <form onSubmit={submitHandler} className="flex flex-wrap justify-between gap-6">
         {/* Left Column */}
@@ -109,17 +111,18 @@ const CreateTask = () => {
             onChange={(e) => setTaskDescription(e.target.value)}
             rows={7}
             placeholder="Describe the task here..."
-            className="bg-transparent border border-cyan-400 px-4 py-2 text-white rounded-md focus:ring-2 focus:ring-cyan-500 transition duration-300 resize-none"
+            className="bg-transparent border mt-2 border-cyan-400 px-4 py-2 text-white rounded-md focus:ring-2 focus:ring-cyan-500 transition duration-300 resize-none"
           />
 
           <button
             type="submit"
-            className="mt-6 bg-emerald-500 hover:bg-emerald-600 py-3 px-5 rounded-md transition hover:scale-105 shadow-md font-semibold"
+            className="mt-6 cursor-pointer bg-emerald-500 hover:bg-emerald-600 py-3 px-5 rounded-md transition hover:scale-105 shadow-md font-semibold"
           >
             Create Task
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

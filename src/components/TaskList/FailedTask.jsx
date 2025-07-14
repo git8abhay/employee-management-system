@@ -19,9 +19,7 @@ const FailedTask = ({ data }) => {
           <XCircle size={16} />
           <span className="text-xs font-medium">Failed</span>
         </div>
-        <button className="text-xs bg-red-600 hover:bg-red-500 rounded-full px-3 py-1">
-          View Reason
-        </button>
+        <div className="text-red-300 text-xs font-medium">Failed</div>
       </div>
     </div>
   );

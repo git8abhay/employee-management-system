@@ -17,11 +17,9 @@ const CompleteTask = ({ data }) => {
       <div className="flex items-center justify-between mt-6">
         <div className="flex items-center gap-1 text-green-400">
           <CheckCircle size={16} />
-          <span className="text-xs font-medium">Completed</span>
+          <span className="text-xs font-semibold">Done</span>
         </div>
-        <button className="text-xs bg-green-600 hover:bg-green-500 rounded-full px-3 py-1">
-          Done
-        </button>
+        <div className="text-green-300 text-xs font-medium">Completed</div>
       </div>
     </div>
   );

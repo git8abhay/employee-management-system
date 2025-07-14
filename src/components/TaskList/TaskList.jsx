@@ -5,6 +5,8 @@ import CompleteTask from './CompleteTask';
 import FailedTask from './FailedTask';
 
 const TaskList = ({ data }) => {
+  const empId = data.id;
+
   return (
     <div
       id="tasklist"
@@ -14,16 +16,19 @@ const TaskList = ({ data }) => {
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      {data.tasks.map((elem, idx) => {
-        const Card = elem.active
-          ? AcceptTask
-          : elem.newTask
-          ? NewTask
-          : elem.completed
-          ? CompleteTask
-          : elem.failed
-          ? FailedTask
-          : null;
+      {data.tasks?.map((elem, idx) => {
+        
+        let Card = null;
+
+        if (elem.newTask === true && elem.active === false) {
+          Card = NewTask;
+        } else if (elem.active === true && elem.completed === false && elem.failed === false) {
+          Card = AcceptTask;
+        } else if (elem.completed === true) {
+          Card = CompleteTask;
+        } else if (elem.failed === true) {
+          Card = FailedTask;
+        }
 
         return Card ? (
           <div
@@ -31,7 +36,7 @@ const TaskList = ({ data }) => {
             className="flex-shrink-0 scroll-snap-align-start"
             style={{ minWidth: '300px' }}
           >
-            <Card data={elem} />
+            <Card data={elem} empId={empId} taskIndex={idx} />
           </div>
         ) : null;
       })}

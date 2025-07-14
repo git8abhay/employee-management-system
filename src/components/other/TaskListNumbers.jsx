@@ -7,7 +7,11 @@ import {
 } from 'lucide-react';
 
 const TaskListNumbers = ({ data }) => {
-  const { newTask, completed, active, failed } = data.taskCounts;
+  if (!data || !data.taskCounts) {
+  return <p className="text-white">Loading task counts...</p>;
+}
+
+const { newTask, active, completed, failed } = data.taskCounts;
 
   const items = [
     {

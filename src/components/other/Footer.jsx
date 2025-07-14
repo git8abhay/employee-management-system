@@ -3,11 +3,11 @@ import { Heart, Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-8 left-0 w-full bg-white/5 backdrop-blur-md border-t border-cyan-400/20 text-cyan-100 text-sm flex flex-col sm:flex-row items-center justify-between px-6 py-3">
+    <footer className="left-0 w-full bg-white/5 backdrop-blur-md border-t border-cyan-400/20 text-cyan-100 text-sm flex flex-col sm:flex-row items-center justify-between px-6 py-3">
  
       {/* Left: Credit Line */}
       <p className="flex items-center gap-1 mb-2 sm:mb-0">
-        Made with <Heart size={14} className="text-red-500" /> by 
+        Made with <Heart size={14} className="text-cyan-200" /> by 
         <span className="text-cyan-300 font-medium ml-1">Abhay Chauhan</span>
       </p>
 
