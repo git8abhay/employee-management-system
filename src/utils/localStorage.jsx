@@ -44,10 +44,10 @@ const employees = [
       {
         newTask: false,
         active: false,
-        completed: true,
-        failed: false,
+        completed: false,
+        failed: true,
         taskTitle: "Create documentation",
-        taskDescription: "Document all API endpoints for developers.",
+        taskDescription: "Document all API endpoints for  web-developers.",
         taskDate: "2025-07-06",
         category: "Documentation"
       }
@@ -274,6 +274,7 @@ const employees = [
 const admin = [
   {
     id: 1,
+    name: "Admin",
     email: "admin@me.com",
     password: "123"
   }

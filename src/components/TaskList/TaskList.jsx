@@ -11,18 +11,12 @@ const TaskList = ({ data }) => {
     <div
       id="tasklist"
       className="mt-14 flex gap-6 overflow-x-auto scrollbar-hide px-2 py-1"
-      style={{
-        scrollSnapType: 'x mandatory',
-        WebkitOverflowScrolling: 'touch',
-      }}
     >
-      {data.tasks?.map((elem, idx) => {
-        
+      {data.tasks?.map((elem, idx) => { 
         let Card = null;
-
-        if (elem.newTask === true && elem.active === false) {
+        if (elem.newTask === true) {
           Card = NewTask;
-        } else if (elem.active === true && elem.completed === false && elem.failed === false) {
+        } else if (elem.active === true) {
           Card = AcceptTask;
         } else if (elem.completed === true) {
           Card = CompleteTask;

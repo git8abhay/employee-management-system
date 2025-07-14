@@ -22,7 +22,7 @@ const EmployeeDashboard = ({ changeUser }) => {
   }
 
   return (
-    <div className="min-h-screen bg-black bg-gradient-to-br from-black via-gray-900 to-black">
+    <div className="h-screen w-screen bg-black bg-gradient-to-br from-black via-gray-900 to-black">
       <Header changeUser={changeUser} data={employee} />
       <main className="p-6">
         <TaskListNumbers data={employee} />
