@@ -10,8 +10,8 @@ const TaskList = ({ data }) => {
   return (
     <div
       id="tasklist"
-      className="mt-14 flex gap-6 overflow-x-auto scrollbar-hide px-2 py-1"
-    >
+      className="mt-14 mb-16 flex flex-col sm:flex-row gap-6 sm:overflow-x-auto overflow-y-auto scrollbar-hide px-2 py-1"
+ >
       {data.tasks?.map((elem, idx) => { 
         let Card = null;
         if (elem.newTask === true) {

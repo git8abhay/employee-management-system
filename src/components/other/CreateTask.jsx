@@ -71,7 +71,7 @@ const CreateTask = () => {
 
 
   return (
-    <div>
+    <div className='m-6'>
       <h2 className="text-3xl font-bold text-white mb-6 text-center">Task Creation</h2>
       <div className="p-6 rounded-xl bg-white/10 border border-cyan-400/30 shadow-md mt-6 backdrop-blur-md">
         <form onSubmit={submitHandler} className="flex flex-wrap justify-between gap-6">

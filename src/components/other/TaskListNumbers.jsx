@@ -35,8 +35,8 @@ const { newTask, active, completed, failed } = data.taskCounts;
       label: 'Failed Tasks',
       count: failed,
       icon: XCircle,
-      border: 'border-red-400',
-      text: 'text-red-400'
+      border: 'border-red-500',
+      text: 'text-red-500'
     },
   ];
 
