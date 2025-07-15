@@ -41,7 +41,7 @@ const { newTask, active, completed, failed } = data.taskCounts;
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-8 mt-10">
+    <div className="flex flex-wrap justify-center gap-8 mt-10 ">
       {items.map(({ label, count, icon: Icon, border, glow, pulse, text }, idx) => (
         <div key={idx} className="flex flex-col items-center group">
           <div

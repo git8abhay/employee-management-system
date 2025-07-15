@@ -3,6 +3,8 @@ import Login from './components/Auth/Login';
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard';
 import AdminDashboard from './components/Dashboard/AdminDashboard';
 import { AuthContext } from './context/AuthProvider';
+import { Toaster } from 'react-hot-toast';
+
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -54,6 +56,7 @@ const currentEmployee = userData?.find((e) => e.id === loggedInUserId);
 
 return (
   <>
+    <Toaster position="top-center" />
     {!user ? (
       <Login handleLogin={handleLogin} />
     ) : user === 'admin' && adminInfo ? (
