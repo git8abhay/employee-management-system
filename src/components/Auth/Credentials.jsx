@@ -14,7 +14,7 @@ const Credentials = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center p-6 bg-black bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <h1 className="text-4xl font-bold mb-6">
-        🔐 Demo Credentials
+        🔐 Login Credentials
       </h1>
       {/* Admin */}
       <div className="border-3 border-cyan-500 rounded-xl p-4 w-full max-w-4xl mb-6 backdrop-blur-md bg-white/10 hover:scale-102 transition duration-300 hover:shadow-lg shadow-cyan-500/30">
