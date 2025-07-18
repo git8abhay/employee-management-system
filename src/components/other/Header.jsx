@@ -11,9 +11,9 @@ const Header = (props) => {
 const username = props.data?.firstName || props.data?.name || 'User';
   
   return (
-    <div className="flex m-6 h-32  justify-between items-center bg-white/10 border border-cyan-400/40 rounded-xl p-8 sm:flex-row sm:gap-0 sm:w-auto">
+    <div className="flex m-6 h-32  justify-between items-center bg-white/10 border-2 border-cyan-400/40 rounded-xl p-8 sm:flex-row sm:gap-0 sm:w-auto">
   <h1 className="text-white text-2xl sm:text-2xl">
-    Hello <br />
+    Welcome Back <br />
     <span className="text-4xl font-semibold !text-yellow-500">{username} 👋</span>
   </h1>
   <button

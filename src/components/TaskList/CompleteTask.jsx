@@ -19,7 +19,7 @@ const CompleteTask = ({ data }) => {
           <CheckCircle size={22} />
           <span className="text-s font-semibold">Done</span>
         </div>
-        <div className="text-green-300 text-s font-medium">Completed</div>
+        <div className="text-green-400 text-s font-medium">Completed</div>
       </div>
     </div>
   );

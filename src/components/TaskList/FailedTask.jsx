@@ -19,7 +19,7 @@ const FailedTask = ({ data }) => {
           <XCircle size={22} />
           <span className="text-s font-medium">Failed</span>
         </div>
-        <div className="text-red-300 text-s font-medium">Failed</div>
+        <div className="text-red-400 text-s font-medium">Failed</div>
       </div>
     </div>
   );

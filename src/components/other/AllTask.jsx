@@ -23,7 +23,7 @@ const AllTask = () => {
         {userData.map((emp, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center gap-4 bg-white/10 backdrop-blur-md border border-cyan-400/30 rounded-2xl shadow-lg p-6 text-white hover:shadow-cyan-500/40 transition-all duration-500 "
+            className="flex flex-col items-center gap-4 bg-white/10 backdrop-blur-md border-2 border-cyan-400/40 rounded-2xl shadow-lg p-6 text-white hover:shadow-cyan-500/40 transition-all duration-500 "
           >
             {/* Avatar */}
             <div className="bg-cyan-500/20 p-4 rounded-full">
