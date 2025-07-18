@@ -117,12 +117,6 @@ This is a **fully responsive Employee Management System** (EMS) built using **Re
 
 ---
 
-## 📸 Screenshots
-
-Images showcasing UI have been included in the repo and uploads (Admin and Employee Dashboards).
-
----
-
 ## 📚 What I Learned
 
 * Creating responsive UI with Tailwind & glassmorphism.
